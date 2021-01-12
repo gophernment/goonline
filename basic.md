@@ -237,7 +237,7 @@ func squareArea(a int) int {
 
 ---
 
-## Example - Prime factor
+## Demo - Prime factor
 
 print prime number in 1..100
 

@@ -242,3 +242,5 @@ func fizzBuzzString() string {
     return fmt.Sprintf("%s%s%s",fizzbuzz.Say(r.Intn(9)+1),fizzbuzz.Say(r.Intn(9)+1),fizzbuzz.Say(r.Intn(9)+1),fizzbuzz.Say(r.Intn(9)+1))
 }
 ```
+
+[Next >](./goroutine.md#1)
