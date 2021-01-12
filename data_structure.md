@@ -365,9 +365,8 @@ Unlike C, Go has no pointer arithmetic.
 
 New Int Type with Method
 
-.toString() to convert integer to string
+.String() to convert integer to string
 .Set(n int) to set new value
-.Int() int
 
 ---
 
