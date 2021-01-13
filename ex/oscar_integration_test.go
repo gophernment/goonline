@@ -1,6 +1,6 @@
 // +build integration
 
-package exer_test
+package ex_test
 
 import (
 	"testing"
