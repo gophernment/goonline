@@ -1,22 +1,4 @@
-# go
-
-## elementary class day 3
-
-Pallat Anchaleechamaikorn
-golang developer
-Technical Coach
-
-yod.pallat@gmail.com
-https://github.com/pallat
-https://github.com/focusive
-https://github.com/gophernment
-
-https://tour.golang.org/
-https://github.com/uber-go/guide
-
----
-
-## First-Class Function
+# First-Class Function
 
 ```go
 var add = func(a, b int) int {
@@ -28,7 +10,7 @@ fmt.Println(add(1, 2))
 
 ---
 
-## Higher-Order Function
+# Higher-Order Function
 
 ```go
 func hof(fn func(string) string) {
@@ -42,13 +24,13 @@ func hof() func(string) string {
 
 ---
 
-## Higher-Order Function Blog
+# Higher-Order Function Blog
 
 https://dev.to/pallat/hof-in-go-18mm
 
 ---
 
-## Closure Function
+# Closure Function
 
 ```go
 func main() {
@@ -74,33 +56,14 @@ func factory() (func(), func() int) {
 
 ---
 
-## Exercise Wrapper Function
-
-> Make a Wrapper for FizzBuzz handler to validate JWT
-
----
-
-## func type
+# func type
 
 ```go
 type areaFunc func(float64, float64) float64 
 ```
 
 ---
-
-## Exercise JWT Validator
-
-Validate JWT in FizzBuzzHandler
-
-```http
-GET http://localhost:8080/fizzbuzz/3
-
-Header["Authorization"]: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-```
-
----
-
-## method on function
+# method on function
 
 ```go
     type IntnFunc func(int) int
@@ -112,7 +75,7 @@ Header["Authorization"]: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOi
 
 ---
 
-## goroutine
+# goroutine
 
 ```go
 func main() {
@@ -132,7 +95,7 @@ func printout(i int) {
 
 ---
 
-## goroutine waiting
+# goroutine waiting
 
 ```go
 var wg = sync.WaitGroup{}
@@ -156,7 +119,7 @@ func printout(i int) {
 
 ---
 
-## channel 
+# channel 
 
 keyword `chan`
 
@@ -165,7 +128,7 @@ keyword `chan`
 
 ---
 
-## buffered channel
+# buffered channel
 
 ```go
 total := 10
@@ -182,7 +145,7 @@ for i := range ch {
 
 ---
 
-## no buffered channel
+# no buffered channel
 
 ```go
 func main() {
@@ -205,3 +168,5 @@ func printout(i int, ch chan struct{}) {
 ```
 
 ---
+
+# Demo fibonacci

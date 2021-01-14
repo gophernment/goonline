@@ -2,53 +2,24 @@
 marp: true
 ---
 
-# go
-
-## Basic Syntax
-
-Pallat Anchaleechamaikorn
-golang developer
-Technical Coach
-
-yod.pallat@gmail.com
-https://github.com/pallat
-https://github.com/focusive
-https://github.com/gophernment
-
-https://tour.golang.org/
-https://github.com/uber-go/guide
+# Basic Syntax
 
 ---
 
-## Getting Started
-
-### Official Golang Page
-
-https://golang.org/ https://golang.org/
-https://go.dev/ https://go.dev/
-
----
-
-## Go Users
-
-https://github.com/golang/go/wiki/GoUsers
-
----
-
-## Installation
+# Installations
 
 https://dev.to/pallat/install-go-4a1a https://dev.to/pallat/install-go-4a1a
 
 ---
 
-## Initial a project
+# Initial a project
 
-### linux/Macbook
+## linux/Macbook
 
     mkdir -p ~/projects/hello
     cd hello
 
-### windows
+## windows
 
     md projects
     cd projects
@@ -57,15 +28,15 @@ https://dev.to/pallat/install-go-4a1a https://dev.to/pallat/install-go-4a1a
 
 ---
 
-## Open VS Code
+# Open VS Code
 
     code .
 
 ---
 
-## Initial go module
+# Initial go module
 
-    go mod init hello
+> go mod init hello
 
 go.mod
 
@@ -77,7 +48,7 @@ go.mod
 
 ---
 
-## Hello World
+# Hello World
 
 run
 
@@ -85,7 +56,7 @@ run
 
 ---
 
-## Basic syntax - Variable declaration
+# Basic syntax - Variable declaration
 
 ```go
 var s string
@@ -98,15 +69,16 @@ var f float64
 
 # Zero Value
 
-- *0#  _for_ _numeric_ _types_
-- *false# _for_ _the_ _boolean_ _type_
-- *""# (the empty string) for strings
+**0** _for_ _numeric_ _types_
+**false** _for_ _the_ _boolean_ _type_
+**""** (the empty string) for strings
+**nil** _for_ _pointer_
 
 ---
 
-## Basic syntax - Variable declaration(2)
+# Basic syntax - Variable declaration(2)
 
-### Declaration with initial value
+## Declaration with initial value
 
 ```go
 var s string = "Hello World"
@@ -117,9 +89,9 @@ var f float64 = 1
 
 ---
 
-## Basic syntax - Variable declaration(3)
+# Basic syntax - Variable declaration(3)
 
-### Type inference
+## Type inference
 
 ```go
 var s = "Hello World"
@@ -130,9 +102,9 @@ var f = 1.0
 
 ---
 
-## Basic syntax - Variable declaration(4)
+# Basic syntax - Variable declaration(4)
 
-### Type inference without var keyword
+## Type inference without var keyword
 
 ```go
 s := "Hello World"
@@ -145,7 +117,7 @@ f := 1.0
 
 ---
 
-## Basic Syntax - Functions
+# Basic Syntax - Functions
 
 ```go
     func add(a int, b int) int {
@@ -159,7 +131,7 @@ f := 1.0
 
 ---
 
-## Exercise - Area of a Square Function
+# Exercise - Area of a Square Function
 
 ```go
 func squareArea(a int) int {
@@ -169,7 +141,7 @@ func squareArea(a int) int {
 
 ---
 
-## Basic Syntax - Functions with no return
+# Basic Syntax - Functions with no return
 
 ```go
     func printAdded(a, b int) {
@@ -179,7 +151,7 @@ func squareArea(a int) int {
 
 ---
 
-## Basic Syntax - Functions multiple return values
+# Basic Syntax - Functions multiple return values
 
 ```go
     func swap(a, b int) (int,int) {
@@ -189,7 +161,7 @@ func squareArea(a int) int {
 
 ---
 
-## Basic syntax - Control Flow if/else
+# Basic syntax - Control Flow if/else
 
 ```go
     if a != b {
@@ -203,7 +175,7 @@ func squareArea(a int) int {
 
 ---
 
-## Basic syntax - Control Flow if/else with statement
+# Basic syntax - Control Flow if/else with statement
 
 ```go
     if ok := IsCorrect(); ok {
@@ -219,7 +191,7 @@ func squareArea(a int) int {
 
 ---
 
-## Basic syntax - loop
+# Basic syntax - loop
 
 ```go
     for i := 0; i < 10; i++ {
@@ -237,13 +209,13 @@ func squareArea(a int) int {
 
 ---
 
-## Demo - Prime factor
+# Demo - Prime factor
 
 print prime number in 1..100
 
 ---
 
-## Excercise - Exponentiation (Power)
+# Excercise - Exponentiation (Power)
 
 ![Formula](./images/exponentiation.svg)
 
@@ -253,9 +225,9 @@ func power(base, exponent int) int
 
 ---
 
-## Packages
+# Packages
 
-### Keyword: package
+## Keyword: package
 
 rules
 
@@ -265,9 +237,9 @@ rules
 
 ---
 
-## Unit testing in go
+# Unit testing in go
 
-### 3 Conditions
+## 3 Conditions
 
 1. filename_test.go
 2. function name prefix is Test
@@ -287,15 +259,15 @@ rules
 
 ---
 
-## TDD
+# TDD
 
-### Test Driven Development
+## Test Driven Development
 
-![TDD](./images/classic_tdd.png)
+![TDD](./asset/classic_tdd.png)
 
 ---
 
-## TDD with the classic problem
+# TDD with the classic problem
 
 FizzBuzz
 
@@ -307,7 +279,7 @@ FizzBuzz
 
 ---
 
-## TDD with the classic problem(2)
+# TDD with the classic problem(2)
 
 FizzBuzz
 
@@ -324,7 +296,7 @@ FizzBuzz
 
 ---
 
-## TDD with the classic problem(3)
+# TDD with the classic problem(3)
 
 FizzBuzz
 
@@ -346,7 +318,7 @@ FizzBuzz
 
 ---
 
-## TDD with the classic problem(4)
+# TDD with the classic problem(4)
 
 FizzBuzz
 
@@ -358,13 +330,16 @@ any number divisible by three is replaced by the word fizz and any number divisi
 
 ---
 
-## Exercise - RESTful API of FizzBuzz
+# Demo - RESTful API of FizzBuzz
 
-    try net/http with gorilla/mux
+    net/http
+    gorilla/mux
+    gin-gonic
+    echo
 
 ---
 
-## Types
+# Types
 
 basic type
 

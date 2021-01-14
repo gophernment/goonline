@@ -1,22 +1,4 @@
-# go
-
-## elementary class day 3
-
-Pallat Anchaleechamaikorn
-golang developer
-Technical Coach
-
-yod.pallat@gmail.com
-https://github.com/pallat
-https://github.com/focusive
-https://github.com/gophernment
-
-https://tour.golang.org/
-https://github.com/uber-go/guide
-
----
-
-## defer
+# defer
 
 A defer statement defers the execution of a function until the surrounding function returns.
 
@@ -31,7 +13,7 @@ body, _ := ioutil.ReadAll(res.Body)
 
 ---
 
-## a defer
+# a defer
 
 ```go
 defer fmt.Println("end")
@@ -41,7 +23,7 @@ fmt.Println("Hello, Gophers")
 
 ---
 
-## defer is stack
+# defer is stack
 
 ```go
 defer fmt.Println("defer first")
@@ -53,7 +35,7 @@ fmt.Println("Hello, Gophers")
 
 ---
 
-## Questions? What is the result
+# Questions? What is the result
 
 ```go
 func doSomething(n int) {
@@ -64,7 +46,7 @@ func doSomething(n int) {
 
 ---
 
-## Questions? One more
+# Questions? One more
 
 ```go
 func doSomething(n int) {
@@ -79,7 +61,7 @@ func doSomething(n int) {
 
 ---
 
-## defer for recovering
+# defer for recovering
 
 ```go
 func catchMe() {
@@ -97,7 +79,7 @@ func catchMe() {
 
 ---
 
-## interface{}: empty interface
+# interface{}: empty interface
 
 ```go
     var i interface{}
@@ -125,7 +107,7 @@ func catchMe() {
 
 ---
 
-## interface: What is the real type?
+# interface: What is the real type?
 
 ```go
 var i interface{}
@@ -140,7 +122,7 @@ n = i
 
 ---
 
-## interface: type assertion
+# interface: type assertion
 
 ```go
 var i interface{} = "hello"
@@ -153,7 +135,7 @@ if s, ok := i.(string); ok {
 
 ---
 
-## switch
+# switch
 
 ```go
 switch {
@@ -170,7 +152,7 @@ default:
 
 ---
 
-## interface: type switch
+# interface: type switch
 
 ```go
 var i interface{} = "hello"
@@ -186,7 +168,7 @@ default:
 
 ---
 
-## interface
+# interface
 
 To define a set of method signatures
 
@@ -204,7 +186,7 @@ type Stringer interface {
 
 ---
 
-## interface: error
+# interface: error
 
 ```go
     type error interface {
@@ -214,7 +196,7 @@ type Stringer interface {
 
 ---
 
-## Interface: names
+# Interface: names
 
 By convention, one-method interfaces are named by the method name plus an -er suffix or similar modification to construct an agent noun: Reader, Writer, Formatter, CloseNotifier etc.
 
@@ -226,11 +208,11 @@ By convention, one-method interfaces are named by the method name plus an -er su
 
 ---
 
-## Example: Play with Stringer
+# Demo: Play with Stringer
 
 ---
 
-## Exercise: Intn
+# Demo: Intn
 
 test it
 

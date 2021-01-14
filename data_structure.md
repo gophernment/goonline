@@ -1,22 +1,8 @@
-# go
-
-## Data Structures
-
-Pallat Anchaleechamaikorn
-golang developer
-Technical Coach
-
-yod.pallat@gmail.com
-https://github.com/pallat
-https://github.com/focusive
-https://github.com/gophernment
-
-https://tour.golang.org/
-https://github.com/uber-go/guide
+# Data Structures
 
 ---
 
-## Array
+# Array
 
 var name [n]T
 
@@ -26,7 +12,7 @@ var name [n]T
 
 ---
 
-## Array auto counting
+# Array auto counting
 
 var name [n]T
 
@@ -37,7 +23,7 @@ var name [n]T
 
 ---
 
-## Foreach in Array
+# Foreach in Array
 
 var name [n]T
 
@@ -51,7 +37,7 @@ var name [n]T
 
 ---
 
-## Foreach index & value
+# Foreach index & value
 
 var name [n]T
 
@@ -65,7 +51,7 @@ var name [n]T
 
 ---
 
-## Slice
+# Slice
 
 var name []T
 
@@ -82,7 +68,7 @@ var name []T
 
 ---
 
-## Zero value of slice is nil
+# Zero value of slice is nil
 
 ```go
     var s []int
@@ -97,7 +83,7 @@ var name []T
 
 ---
 
-## append slice
+# append slice
 
 ```go
     s := []int{1, 2, 3, 4, 5}
@@ -106,27 +92,47 @@ var name []T
 
 ---
 
-## Exercise: couple
+# Slice Structure
 
-"abcdef" -> []string{"ab","cd","ef"}
-"abcdefg" -> []string{"ab","cd","ef","g*"}
-
----
-
-## Exercise: moretypes/18
-
-https://tour.golang.org/moretypes/18 https://tour.golang.org/moretypes/18
-https://go-tour-th.appspot.com/moretypes/18 https://go-tour-th.appspot.com/moretypes/18
+![width:650px](./asset/golang-slices-illustration.jpg)
 
 ---
 
-## Variadic function (Variable number of arguments)
+# Slice Structure with value
 
-func variadic(nums ...int)
+```go
+var a = [6]int{10, 20, 30, 40, 50, 60}
+var s = [1:4]
+```
+
+![width:650px](./asset/golang-slices-length-capacity.jpg)
 
 ---
 
-## Spread operator
+# Tour of Go
+
+https://tour.golang.org
+https://tour.golang.org/moretypes/18
+
+---
+
+# Variadic function (Variable number of arguments)
+
+```go
+func variadic(nums ...int) {
+
+}
+```
+
+```go
+variadic()
+variadic(1)
+variadic(1,2,3,4)
+```
+
+---
+
+# Spread operator
 
 ```go
 func variadic(nums ...int) {
@@ -140,7 +146,7 @@ variadic(slice...)
 
 ---
 
-## map[T]T
+# map[T]T
 
 ```go
     var m map[string]string
@@ -148,7 +154,7 @@ variadic(slice...)
 
 ---
 
-## zero value of map is nil
+# zero value of map is nil
 
 ```go
     var m map[string]string
@@ -160,9 +166,9 @@ variadic(slice...)
 
 ---
 
-## map need home
+# map need home
 
-### make
+## make
 
 ```go
     m := make(map[string]string)
@@ -182,7 +188,7 @@ variadic(slice...)
 
 ---
 
-## construct map
+# construct map
 
 ```go
     m := map[string]string{
@@ -202,7 +208,7 @@ variadic(slice...)
 
 ---
 
-## delete a key
+# delete a key
 
 ```go
     m := map[string]string{
@@ -224,7 +230,7 @@ variadic(slice...)
 
 ---
 
-## Exercise: map
+# Demo: map
 
 open a file oscar_age_male.csv
 
@@ -246,7 +252,7 @@ print any actors name who got the oscar more than one time
 
 ---
 
-## Exercise: map represent json
+# Exercise: map represent json
 
 http://www.groupkt.com/post/c9b0ccb9/country-and-other-related-rest-webservices.htm
 
@@ -254,7 +260,7 @@ http://services.groupkt.com/country/get/iso3code/IND
 
 ---
 
-## len() with slice
+# len() with slice
 
 ```go
     s := []primes{2, 3, 5, 7, 11, 13}
@@ -264,7 +270,7 @@ http://services.groupkt.com/country/get/iso3code/IND
 
 ---
 
-## len() with map
+# len() with map
 
 ```go
     m := map[string]string{
@@ -282,7 +288,7 @@ http://services.groupkt.com/country/get/iso3code/IND
 
 ---
 
-## Pointer
+# Pointer
 
 Go has pointers. A pointer holds the memory address of a value.
 
@@ -303,7 +309,7 @@ Unlike C, Go has no pointer arithmetic.
 
 ---
 
-## Example Pointer
+# Example Pointer
 
 ```go
     var p *int
@@ -318,7 +324,7 @@ Unlike C, Go has no pointer arithmetic.
 
 ---
 
-## new
+# new
 
 ```go
     var p = new(int)
@@ -333,7 +339,7 @@ Unlike C, Go has no pointer arithmetic.
 
 ---
 
-## Type
+# Type
 
 > type newType T
 
@@ -349,7 +355,7 @@ Unlike C, Go has no pointer arithmetic.
 
 ---
 
-## method on primitive type inspired by Java
+# method on primitive type inspired by Java
 
 ```go
     type Int int
@@ -361,7 +367,7 @@ Unlike C, Go has no pointer arithmetic.
 
 ---
 
-## Exercise
+# Demo Int with method Set
 
 New Int Type with Method
 
@@ -370,7 +376,7 @@ New Int Type with Method
 
 ---
 
-## struct type
+# struct type
 
 ```go
     type Rectangle struct {
@@ -381,7 +387,7 @@ New Int Type with Method
 
 ---
 
-## Construct struct instance
+# Construct struct instance
 
 ```go
     rec := Rectangle{Width: 10, Length: 12}
@@ -391,7 +397,7 @@ New Int Type with Method
 
 ---
 
-## Exercise JWT Token API
+# Exercise JWT Token API
 
 pick a Web Framework to make the Login API
 
@@ -414,7 +420,7 @@ response:
 
 ---
 
-## method on struct
+# method on struct
 
 ```go
     type Rectangle struct {
@@ -428,19 +434,5 @@ response:
 ```
 
 ---
-
-## Test Double in Go
-
-- Mock
-- Stub
-- Spy
-- Dummy
-- Fake
-
----
-
-## Exercise test double
-
-Random 4 number pass to FizzBuzz and test it
 
 [Next >](./interface.md#1)
